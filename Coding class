@@ -1,0 +1,14 @@
+def faq_bot():
+    faqs = {"What are your business hours?" : "Our business hours are 9 to 5",
+            "What are your Office number": "Our number is 123456789" 
+            }
+    print("Welcome to Ai chatbot. Type your question or 'Exit' to quit")
+    while True:
+        user_input = input("You: ").strip()
+        if user_input.lower() == "exit":
+            print("Goodbye!")
+            break
+        response = faqs.get(user_input, "Sorry, I don't have an answer to that question.")
+        print("Bot", response)
+
+faq_bot()
